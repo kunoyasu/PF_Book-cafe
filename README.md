@@ -64,6 +64,10 @@ https://my-best.com/5549
 
 https://www.figma.com/file/kdSxpUcGNlU0SRU3geVfGM/BookCafe?node-id=0%3A1
 
+### ER 図
+
+https://drive.google.com/file/d/1UgpTL6YUo2_VdeQkCtOvGBSbDx9Bn1UL/view?usp=sharing
+
 ### スケジュール
 
 README〜ER 図作成：3/18 〆切
