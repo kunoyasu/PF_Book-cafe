@@ -47,7 +47,7 @@ Book Cafe 相性診断
 ・Twitter シェア機能
 
 【リリース後順次追加】
-・ログイン機能・コメント機能・画像投稿機能
+・ログイン機能・コメント機能・画像投稿機能・管理者機能
 
 ### **なぜこのサービスを作りたいのか？**
 
@@ -63,6 +63,10 @@ https://my-best.com/5549
 ### 画面遷移図
 
 https://www.figma.com/file/kdSxpUcGNlU0SRU3geVfGM/BookCafe?node-id=0%3A1
+
+### ER 図
+
+https://drive.google.com/file/d/1UgpTL6YUo2_VdeQkCtOvGBSbDx9Bn1UL/view?usp=sharing
 
 ### スケジュール
 
