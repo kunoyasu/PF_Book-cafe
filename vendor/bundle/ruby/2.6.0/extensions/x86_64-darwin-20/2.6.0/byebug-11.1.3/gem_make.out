@@ -1,0 +1,23 @@
+current directory: /Users/kunoyasuyuki/Desktop/bookcafe/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
+/Users/kunoyasuyuki/.rbenv/versions/2.6.6/bin/ruby -I /Users/kunoyasuyuki/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20220319-60256-1m89rpf.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kunoyasuyuki/Desktop/bookcafe/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/kunoyasuyuki/Desktop/bookcafe/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+ld: warning: directory not found for option '-L/usr/local/opt/zlib/lib'
+ld: warning: directory not found for option '-L/usr/local/opt/bzip2/lib'
+ld: warning: directory not found for option '-L/usr/local/opt/zlib/lib'
+ld: warning: directory not found for option '-L/usr/local/opt/bzip2/lib'
+
+current directory: /Users/kunoyasuyuki/Desktop/bookcafe/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20220319-60256-1oxixdd/byebug
