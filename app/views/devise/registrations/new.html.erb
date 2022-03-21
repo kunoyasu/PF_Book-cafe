@@ -37,9 +37,14 @@
 
         <!-- Form -->
         <form>
+            <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
           <div class="mb-3">
             <label class="form-label" for="signupSimpleSignupEmail">Your email</label>
-              <input type="email" class="form-control form-control-lg" placeholder="email@site.com">
+              <div class="form-control form-control-lg" placeholder="email@site.com">
+                <%= f.email_field :email , :size => "45*50" %>
+
+              </div>
             <!-- エラーメッセージを挿入する -->
             <span class="invalid-feedback">Please enter a valid email address.</span>
           </div>
@@ -47,28 +52,35 @@
             <label class="form-label" for="signupSimpleSignupPassword">Password</label>
 
             <div class="input-group input-group-merge" data-hs-validation-validate-class>
-              <input type="password" class="js-toggle-password form-control form-control-lg"placeholder="8+ characters required">
+              <div class="form-control form-control-lg"placeholder="8+ characters required">
+                <%= f.password_field :password, autocomplete: "off"  , :size => "45*50" %>
+                  <%= f.label :password %>
+                    <% if @minimum_password_length %>
+                      <em>(<%= @minimum_password_length %> characters minimum)</em>
+                    <% end %><br/>
+              </div>
             </div>
             <!-- エラーメッセージを挿入する -->
             <span class="invalid-feedback">Your password is invalid. Please try again.</span>
           </div>
           <div class="mb-3">
             <label class="form-label" for="signupSimpleSignupConfirmPassword">Confirm password</label>
-
-            <div class="input-group input-group-merge" data-hs-validation-validate-class>
-              <input type="password" class="js-toggle-password form-control form-control-lg" placeholder="8+ characters required">
+              <div class="form-control form-control-lg" placeholder="8+ characters required">
+              <%= f.password_field :password_confirmation, autocomplete: "off" , :size => "45*50" %>
+              </div>
             </div>
             <!-- エラーメッセージを挿入する -->
             <span class="invalid-feedback">Password does not match the confirm password.</span>
           </div>
           <!-- End Form -->
-          <div class="d-grid mb-3">
+          <div class="mb-3 text-center">
             <button type="submit" class="btn btn-primary btn-lg">Sign up</button>
           </div>
 
           <div class="text-center">
             <p>Already have an account? <a class="link" href="./page-login-simple.html">Log in here</a></p>
           </div>
+          <% end %>
         </form>
         <!-- End Form -->
       </div>
@@ -77,3 +89,4 @@
   </main>
 </body>
 </html>
+s
