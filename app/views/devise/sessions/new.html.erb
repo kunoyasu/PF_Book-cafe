@@ -37,7 +37,7 @@
 
         <!-- Form -->
         <form>
-            <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+            <%= form_with model: @user local: true do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
           <div class="mb-3">
             <label class="form-label" for="signupSimpleSignupEmail">Your email</label>

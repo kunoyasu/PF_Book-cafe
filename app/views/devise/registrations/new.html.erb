@@ -37,13 +37,12 @@
 
         <!-- Form -->
         <form>
-            <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+            <%= form_with model: @user, url: new_user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
           <div class="mb-3">
             <label class="form-label" for="signupSimpleSignupEmail">Your email</label>
               <div class="form-control form-control-lg" placeholder="email@site.com">
                 <%= f.email_field :email , :size => "45*50" %>
-
               </div>
             <!-- エラーメッセージを挿入する -->
             <span class="invalid-feedback">Please enter a valid email address.</span>
@@ -69,14 +68,13 @@
               <%= f.password_field :password_confirmation, autocomplete: "off" , :size => "45*50" %>
               </div>
             </div>
-            <!-- エラーメッセージを挿入する -->
+            <!-- エラーメッセージを挿入する --> 
             <span class="invalid-feedback">Password does not match the confirm password.</span>
           </div>
           <!-- End Form -->
           <div class="mb-3 text-center">
             <button class="btn btn-primary btn-lg"><%= f.submit "Sign up" %></button>
           </div>
-
           <div class="text-center">
             <p>Already have an accounst? <a class="link" href="./page-login-simple.html">Log in here</a></p>
           </div>
@@ -89,4 +87,3 @@
   </main>
 </body>
 </html>
-s
