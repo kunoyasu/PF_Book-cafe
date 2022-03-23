@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="">
-<head>
-  <!-- Required Meta Tags Always Come First -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Title -->
-  <title>Signup Simple | Front - Multipurpose Responsive Template</title>
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./favicon.ico">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS Implementing Plugins -->
-  <link rel="stylesheet" href="./assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="./assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-
-  <!-- CSS Front Template -->
-  <link rel="stylesheet" href="./assets/css/theme.min.css">
-</head>
-
-<body>
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
     <!-- Form -->
@@ -36,8 +12,7 @@
         <!-- End Heading -->
 
         <!-- Form -->
-        <form>
-            <%= form_with model: @user, url: new_user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+            <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
           <div class="mb-3">
             <label class="form-label" for="signupSimpleSignupEmail">Your email</label>
@@ -79,11 +54,8 @@
             <p>Already have an accounst? <a class="link" href="./page-login-simple.html">Log in here</a></p>
           </div>
           <% end %>
-        </form>
         <!-- End Form -->
       </div>
     </div>
     <!-- End Form -->
   </main>
-</body>
-</html>
