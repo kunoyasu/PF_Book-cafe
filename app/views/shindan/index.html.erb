@@ -546,7 +546,13 @@
 
               <!-- Button -->
               <li class="nav-item">
-                <a class="btn btn-primary btn-transition" href="">管理者ログイン</a>
+                <a class="btn btn-primary btn-transition" href="">
+                <%= link_to "新規登録",  new_user_registration_path, class: "post" %>
+                </a>
+
+                <a class="btn btn-primary btn-transition" href="">
+                  <%= link_to "サインアウト",destroy_user_session_path,  method: :delete, class: "post" %>
+                </a>
               </li>
               <!-- End Button -->
             </ul>
