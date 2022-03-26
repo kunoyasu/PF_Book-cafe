@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" dir="">
-<head>
-  <!-- Required Meta Tags Always Come First -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Title -->
-  <title>Signup Simple | Front - Multipurpose Responsive Template</title>
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./favicon.ico">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS Implementing Plugins -->
-  <link rel="stylesheet" href="./assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="./assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-
-  <!-- CSS Front Template -->
-  <link rel="stylesheet" href="./assets/css/theme.min.css">
-</head>
-
-<body>
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
     <!-- Form -->
@@ -30,19 +5,18 @@
       <div class="flex-grow-1 mx-auto" style="max-width: 28rem;">
         <!-- Heading -->
         <div class="text-center mb-5 mb-md-7">
-          <h1 class="h2">Welcome back</h1>
-          <p>Login to manage your account.</p>
+          <h1 class="h2">Welcome to Front</h1>
+          <p>Fill out the form to get started.</p>
         </div>
         <!-- End Heading -->
 
         <!-- Form -->
-        <form>
-            <%= form_with model: @user local: true do |f| %>
+            <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
           <div class="mb-3">
             <label class="form-label" for="signupSimpleSignupEmail">Your email</label>
               <div class="form-control form-control-lg" placeholder="email@site.com">
-                <%= f.email_field :email ,autofocus: true, :size => "45*50" %>
+                <%= f.email_field :email , :size => "45*50" %>
               </div>
             <!-- エラーメッセージを挿入する -->
             <span class="invalid-feedback">Please enter a valid email address.</span>
@@ -53,6 +27,9 @@
             <div class="input-group input-group-merge" data-hs-validation-validate-class>
               <div class="form-control form-control-lg"placeholder="8+ characters required">
                 <%= f.password_field :password, autocomplete: "off"  , :size => "45*50" %>
+                    <% if @minimum_password_length %>
+                      <em>(<%= @minimum_password_length %> characters minimum)</em>
+                    <% end %><br/>
               </div>
             </div>
             <!-- エラーメッセージを挿入する -->
@@ -60,18 +37,14 @@
           </div>
           <!-- End Form -->
           <div class="mb-3 text-center">
-            <button class="btn btn-primary btn-lg"><%= f.submit "Log in" %></button>
+            <button class="btn btn-primary btn-lg"><%= f.submit "Sign up" %></button>
           </div>
-
           <div class="text-center">
-            <p>Don't have an account yet?<a class="link" href="./page-login-simple.html">Sign up here</a></p>
+            <p>Already have an accounst? <a class="link" href="./page-login-simple.html">Log in here</a></p>
           </div>
           <% end %>
-        </form>
         <!-- End Form -->
       </div>
     </div>
     <!-- End Form -->
   </main>
-</body>
-</html>
