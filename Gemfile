@@ -61,3 +61,5 @@ gem 'devise'
 gem 'mysql2'
 
 gem 'pry-rails'
+
+gem 'font-awesome-rails'
