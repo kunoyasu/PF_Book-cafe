@@ -57,8 +57,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # gem deviseの導入
 gem 'devise'
-gem 'cancancan'
-gem 'rails_admin', '~> 2.0'
 
 gem 'mysql2'
 
